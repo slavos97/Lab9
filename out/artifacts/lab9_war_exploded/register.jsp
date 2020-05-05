@@ -1,71 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Alisa
-  Date: 29.04.2020
-  Time: 16:50
-  To change this template use File | Settings | File Templates.
---%>
-<%@page language="java" contentType="text/html; charset=UTF-8"
-        pageEncoding="UTF-8" %>
-<%-- Импортировать JSTL-библиотеку --%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%-- Импортировать собственную библиотеку теговых файлов --%>
-<%@taglib prefix="my" tagdir="/WEB-INF/tags" %>
-<%-- Импортировать собственную библиотеку тегов --%>
-<%@taglib prefix="ad" uri="http://bsu.rfe.java.teacher.tag/ad" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="my" tagdir="/WEB-INF/tags"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Главная страница</title>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <title>Регистрация нового пользователя</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 </head>
 <body>
-<%-- Подключить заголовок страницы --%>
 <jsp:include page="/static/header.jsp"></jsp:include>
-<h1>Главная страница</h1>
-<%-- Вставить разметку 2-колоночной страницы --%>
-<my:layout2Columns leftColumnWidth="68%" rightColumnWidth="28%">
-<jsp:attribute name="leftColumnBody">
-    <%-- Содержание левой колонки передаѐтся как атрибут
-leftColumnBody --%>
-    <%-- Извлечь список всех объявлений --%>
-    <ad:getAds range="all" var="adListing"
-               sort="${sessionScope.sort}" dir="${sessionScope.dir}" />
-    <%-- Показать объявления без возможности
-редактирования --%>
-    <my:adListing adListing="${adListing}"
-                  editMode="false" />
-</jsp:attribute>
-<jsp:attribute name="rightColumnBody">
-    <%-- Содержание правой колонки передаѐтся как атрибут
-rightColumnBody --%>
-    <%-- Вставить тег отображения сообщения об ошибке --%>
+<my:layout1Column>
+    <h1>Регистрация нового пользователя</h1>
     <my:errorMessage />
-    <%-- Вставить форму входа --%>
-<my:loginForm>
-
-<jsp:attribute name="processor">
-    <%-- Адрес страницы-обработчика задаѐтся
-как атрибут processor
-    Т.к. необходимо "склеить" имя страницы с
-именем контекста,
-    используется JSTL тег c:url --%>
-    <c:url value="/doLogin.jsp" />
-</jsp:attribute>
-</my:loginForm>
-    <%-- Вставить ссылку регистрации --%>
-<my:registerButton>
-<jsp:attribute name="processor">
-    <%-- Адрес страницы с формой регистрации
-передаѐтся как и
-    для страницы-обработчика формы регистрации
---%>
-    <c:url value="/register.jsp" />
-</jsp:attribute>
-</my:registerButton>
-</jsp:attribute>
-</my:layout2Columns>
-<%-- Вставить нижний заголовок страницы --%>
-<%@ include file="/static/footer.jsp" %>
+    <form id="mform" action="doRegister.jsp" method="post">
+        <table>
+                <%-- body="0" cellspacing="0" cellpadding="10">--%>
+            <tr>
+                <td>Логин:</td>
+                <td><input type="text" name="login" value="${sessionScope.userData.login}"></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td><input type="password" name="password" value=""></td>
+            </tr>
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" name="name" value="${sessionScope.userData.name}"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" value="${sessionScope.userData.email}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Зарегистрироваться"> <input
+                        type="button" value="Отменить"
+                        onclick="window.location='<c:url value="/index.jsp"/>';"></td>
+            </tr>
+        </table>
+    </form>
+</my:layout1Column>
+<%@ include file="/static/footer.jsp"%>
 </body>
 </html>
-

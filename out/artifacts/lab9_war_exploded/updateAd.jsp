@@ -38,8 +38,7 @@
 <html>
 <head>
     <title><c:out value="${title}"/> объявления</title>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-
-8'/>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
 </head>
 <body>
 <%-- Подключить заголовок страницы --%>
@@ -51,7 +50,7 @@
     <my:errorMessage/>
     <%-- Отобразить форму редактирования объявления (с
 подстановкой переданных данных) --%>
-    <form action="/ad/doUpdateAd.jsp" method="post">
+    <form action="doUpdateAd.jsp" method="post">
             <%-- Если переданный параметр id больше нуля (т.е. мы
     редактируем объявление),
             то сохранить его в невидимом поле --%>
@@ -59,32 +58,26 @@
             <input type="hidden" name="id"
                    value="${param.id}">
         </c:if>
-        <table body="0" cellspacing="0" cellpadding="10"
-               width="90%">
-            <tr>
-                <td>Заголовок:</td>
-                    <%-- Начальное значение поля ввода равно
-        текущей теме объявления --%>
-                <td><input type="text" name="subject"
-                           value="${sessionScope.adData.subject}" style="width: 90%"></td>
-            </tr>
-            <tr>
-                <td>Текст:</td>
-                    <%-- Начальное значение области текста равно текущему тексту объявления --%>
-                <td><textarea name="body" rows="10"
-                              style="width: 90%"><c:out value="${sessionScope.adData.body}"/></textarea></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit"
-                           value="Сохранить">
-                        <%-- При нажатии на кнопку
-          "Отменить" возвращаемся на страницу кабинета --%>
-                    <input type="button"
-                           value="Отменить" onclick="window.location='<c:url value="/cabinet.jsp"/>';">
-                </td>
-            </tr>
-        </table>
+                <table>
+                    <tr>
+                        <td>Заголовок:</td>
+                            <%-- Начальное значение поля ввода равно текущей теме объявления --%>
+                        <td><input type="text" name="subject" value="${sessionScope.adData.subject}" style="width: 90%"></td>
+                    </tr>
+                    <tr>
+                        <td>Текст:</td>
+                            <%-- Начальное значение области текста равно текущему тексту объявления --%>
+                        <td><textarea name="body" rows="10" cols="80" style="width: 90%">
+							<c:out value="${sessionScope.adData.body}" />
+						</textarea></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="Сохранить"> <%-- При нажатии на кнопку "Отменить" возвращаемся на страницу кабинета --%>
+                            <input type="button" value="Отменить" onclick="window.location='<c:url value="/cabinet.jsp" />'">
+                        </td>
+                    </tr>
+                </table>
     </form>
 </my:layout1Column>
 <%-- Вставить нижний заголовок страницы --%>

@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
     <tag>
         <description>Выполняет добавление нового пользователя</description>
         <name>addUser</name>
-        <tag-class>AddUser</tag-class>
+        <tag-class>lab9.tag.AddUser</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Bean пользователя</description>
@@ -27,7 +27,7 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
     <tag>
         <description>Аутентифицирует пользователя</description>
         <name>login</name>
-        <tag-class>Login</tag-class>
+        <tag-class>lab9.tag.Login</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Логин пользователя</description>
@@ -45,7 +45,7 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
     <tag>
         <description>Извлечение объявлений различными способами</description>
         <name>getAds</name>
-        <tag-class>GetAds</tag-class>
+        <tag-class>lab9.tag.GetAds</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Указывает id объявления для извлечения</description>
@@ -84,7 +84,7 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
     <tag>
         <description>Обновляет (или создаѐт) объявление</description>
         <name>updateAd</name>
-        <tag-class>UpdateAd</tag-class>
+        <tag-class>lab9.tag.UpdateAd</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Bean объявления</description>
@@ -96,7 +96,7 @@ http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
     <tag>
         <description>Удаляет объявление из системы</description>
         <name>deleteAd</name>
-        <tag-class>DeleteAd</tag-class>
+        <tag-class>lab9.tag.DeleteAd</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Bean объявления</description>
