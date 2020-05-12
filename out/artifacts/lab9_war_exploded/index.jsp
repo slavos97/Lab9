@@ -30,7 +30,7 @@ leftColumnBody --%>
   <%-- Извлечь список всех объявлений --%>
   <ad:getAds range="all" var="adListing"
              sort="${sessionScope.sort}" dir="${sessionScope.dir}" />
-  <%-- Показать объявления без возможности
+  <%-- Показать объявления без возможноnсти
 редактирования --%>
   <my:adListing adListing="${adListing}"
                 editMode="false" />

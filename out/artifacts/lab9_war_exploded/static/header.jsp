@@ -18,8 +18,8 @@
     <c:set var="dir" scope="session" value="${param.dir}"/>
 </c:if>
 <%-- Общая декоративная "шапка" для всех страниц --%>
-<div style="background-color: #a0c8ff; padding: 10px; ">
-    <img src="/ad/resources/ad.png" width="50" height="53" border="0"
+<div style="background-color: #3cbd7a; padding: 10px; ">
+    <img src="/lab9_war_exploded/resources/ad.png" width="50" height="53" border="0"
          align="left">
     <div style="font-family: 'Trebuchet'; font-size: 30px; height: 53px;
 margin-left: 80px;">
