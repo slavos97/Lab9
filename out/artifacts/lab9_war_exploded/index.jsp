@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Alisa
-  Date: 28.04.2020
+  User: Shumanov Vladislav
+  Date: 14.05.2020
   Time: 18:58
   To change this template use File | Settings | File Templates.
 --%>
@@ -21,7 +21,7 @@
 <body>
 <%-- Подключить заголовок страницы --%>
 <jsp:include page="/static/header.jsp"></jsp:include>
-<h1>Главная страница</h1>
+<h1>Главная страница</h1> <br> <h2>Елена Аркадьевна лучший преподаватель</h2>
 <%-- Вставить разметку 2-колоночной страницы --%>
 <my:layout2Columns leftColumnWidth="68%" rightColumnWidth="28%">
 <jsp:attribute name="leftColumnBody">

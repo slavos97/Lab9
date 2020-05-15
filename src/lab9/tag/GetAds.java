@@ -128,7 +128,7 @@ public class GetAds extends SimpleTagSupport {
                 // Отсортировать список
                 Collections.sort(sortedList, comparator);
             }
-            // Сохранить отсортированный список в переменной с именемvarName
+            // Сохранить отсортированный список в переменной с именем varName
             // В контексте страницы
             getJspContext().setAttribute(GetAds.this.var, sortedList,
                     PageContext.PAGE_SCOPE);
