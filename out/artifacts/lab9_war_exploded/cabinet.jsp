@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  Date: 14.05.2020
-  Date: 29.04.2020
-  Time: 16:55
-  To change this template use File | Settings | File Templates.
---%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
         pageEncoding="UTF-8" %>
 <%-- Импортировать JSTL-библиотеку --%>

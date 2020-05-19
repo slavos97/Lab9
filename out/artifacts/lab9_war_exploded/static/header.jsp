@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Shumanov Vladislav
-  Date: 14.05.2020
-  Time: 16:40
-  To change this template use File | Settings | File Templates.
---%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
         pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -18,12 +11,12 @@
     <c:set var="dir" scope="session" value="${param.dir}"/>
 </c:if>
 <%-- Общая декоративная "шапка" для всех страниц --%>
-<div style="background-color: #3cbd7a; padding: 10px; ">
-    <img src="/lab9_war_exploded/resources/ad.png" width="50" height="53" border="0"
+<div style="background-color: #378ff0; padding: 10px; ">
+    <img src="/lab9_war_exploded/resources/traxter.jpg" width="71" height="53" border="0"
          align="left">
-    <div style="font-family: 'Trebuchet'; font-size: 30px; height: 53px;
+    <div style="font-family: 'DS Greece'; font-size: 50px; height: 53px;
 margin-left: 80px;">
-        Доска объявлений "Фиговый листок" v.1.0.0
+        Доска объявлений имени Кирилла Сергеевича Шпака
     </div>
 </div>
 <%-- Панель отображается если пользователь аутентифицирован --%>

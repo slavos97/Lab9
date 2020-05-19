@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Shumanov Vladislav
-  Date: 14.05.2020
-  Time: 16:46
-  To change this template use File | Settings | File Templates.
---%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
         pageEncoding="UTF-8" %>
 <%-- Импортировать JSTL-библиотеки --%>
